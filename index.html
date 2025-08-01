@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Singh Bains| Developer Portfolio</title>
+  <link rel="icon" type="image/png" href="man.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #1c1c1c;
+      padding: 30px 0;
+      text-align: center;
+      border-bottom: 2px solid #555;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      color: #fff;
+      animation: slideDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+      animation: fadeIn 2s ease-in;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #ddd;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #555;
+      margin-top: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      backdrop-filter: blur(6px);
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 2px solid #ccc;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      font-size: 2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    a {
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .project-card {
+        padding: 15px;
+      }
+    }
+
+  #skills {
+  padding: 40px 0;
+}
+
+.skills-category {
+  margin-bottom: 30px;
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; cursor: pointer;
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.skills-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ccc;
+  border-left: 4px solid #555;
+  padding-left: 10px;
+}
+
+.skills-category ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.skills-category li {
+  line-height: 1.8;
+  color: #aaa;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-category li:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .skills-category {
+    padding: 15px;
+  }
+
+  .skills-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-category li {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Vaibhav Singh Bains</h1>
+    <p>Data Science & AI Enthusiast | Python Developer | Machine Learning | SQL | Flask | Power BI</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="Vaibhav-Resume.pdf" download>Resume</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a motivated and detail-oriented individual with strong foundational experience in Python development, data analysis, and machine learning. 
+        With hands-on experience gained through academic projects and self-driven work, 
+        I have developed and deployed solutions involving data preprocessing, visualization, predictive modeling, and full-stack web development. <br><br>
+  
+        I am proficient in using Python for building robust applications, conducting data-driven research, and implementing machine learning models for real-world scenarios. 
+        My expertise spans areas such as data wrangling, statistical analysis, model training, and developing RESTful APIs using frameworks like Flask. <br><br>
+
+        Passionate about solving complex problems, I aim to contribute to dynamic teams as a Python Developer, Data Analyst, Data Scientist, or ML Engineer. 
+        I am committed to continuous learning, writing clean and maintainable code, and applying AI-driven solutions to make impactful contributions in the tech industry.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <a href="https://github.com/vaibhavvst24/Smart-Inventory-System" class="project-card" target="_blank">
+          <h3>Smart Inventory System</h3>
+          <p>A web-based inventory management solution built with Python and Flask, allowing users to add, update, view, delete, and export inventory records in a user-friendly interface.</p>
+        </a>
+
+        <a href="https://github.com/vaibhavvst24/Data-Analysis-CWC-23/tree/main" class="project-card" target="_blank">
+          <h3>Data Analysis CWC 23</h3>
+          <p>This project presents a data analysis and visualization of the Cricket World Cup (CWC) 2023, using Python.
+             Make the analysis interactive and visually engaging using plotting libraries.</p>
+        </a>
+
+        <a href="https://github.com/vaibhavvst24/Drowsiness-Detection-Using-ML" class="project-card" target="_blank">
+          <h3>Drowsiness Detection</h3>
+          <p>This project implements a real-time drowsiness detection system using machine learning. deploy a classification model that predicts whether a person is drowsy or alert.</p>
+        </a>
+
+        <a href="https://github.com/vaibhavvst24/Salary-Prediction-System/tree/main" class="project-card" target="_blank">
+          <h3>Salary Prediction System</h3>
+          <p>This project focuses on classifying salary levels based on various input features using supervised machine learning techniques.</p>
+        </a>
+        
+        <a href="https://github.com/vaibhavvst24/HR-Analytics-Power-bi" class="project-card" target="_blank">
+          <h3>HR-Analytics Power BI</h3>
+          <p>This project presents an interactive HR Analytics Dashboard built using Power BI to analyze employee data and derive actionable insights for human resource management.</p>
+        </a>
+
+        <a href="https://github.com/vaibhavvst24/Dynamic-Pricing-System-Ecommerce" class="project-card" target="_blank">
+          <h3>Dynamic Pricing System</h3>
+          <p>Built a Dynamic Pricing Model for E-Commerce that predicts weekly sales using real-world factors. The goal was to help businesses make smarter pricing decisions.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skills-category">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Tools & Technologies</h3>
+        <ul>
+          <li>Flask</li>
+          <li>MySQL</li>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>AWS Basics</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Data Science & Machine Learning</h3>
+        <ul>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>Matplotlib</li>
+          <li>Seaborn</li>
+          <li>Scikit-learn</li>
+          <li>Data Analysis & Visualization</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Team Collaboration</li>
+          <li>Communication</li>
+          <li>Adaptability</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="social-icons">
+        <a href="tel:+918959667282"><i class="fas fa-phone"></i></a>
+        <a href="mailto:vaibhavvst8@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/vaibhav-singh-bains/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/vaibhavvst24" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Vaibhav Singh. All rights reserved.</p>
+  </footer>
+</body>
+</html>
